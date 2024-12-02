@@ -24,7 +24,7 @@ import { Track } from "livekit-client";
 registerGlobals();
 
 const API_CONFIG = {
-  apiKey: process.env.HEYGEN_API_KEY,
+  apiKey: "apikey",
   serverUrl: "https://api.heygen.com",
 };
 

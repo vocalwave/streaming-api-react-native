@@ -33,11 +33,15 @@ cd streaming-api-react-native
 bun i
 ```
 
-2. Configure environment variables:
-   Create a `.env` file in the project root and add your HeyGen API key:
+2. Configure API token variable:
 
-```env
-HEYGEN_API_KEY=your_api_key_here
+Make sure to replace `API_CONFIG.apiKey` with your actual API key.
+
+```ts
+const API_CONFIG = {
+  apiKey: "apikey",
+  serverUrl: "https://api.heygen.com",
+};
 ```
 
 ## Development
