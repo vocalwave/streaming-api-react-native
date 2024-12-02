@@ -12,14 +12,33 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "plugins": [
+      "@livekit/react-native-expo-plugin",
+      "@config-plugins/react-native-webrtc"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.heygen.livekitdemo",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Camera access is required for video streaming",
+        "NSMicrophoneUsageDescription": "Microphone access is required for audio streaming",
+        "UIBackgroundModes": ["audio", "voip"]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.heygen.livekitdemo",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_CAMERA",
+        "FOREGROUND_SERVICE_MICROPHONE",
+        "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
